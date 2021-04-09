@@ -1,0 +1,796 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.header {
+  background-color: lightblue;
+
+  padding: 10px;
+  color: black;
+  margin: 0 auto;
+  height: 300px;
+  width: 90%;
+  position: relative;
+  border: 5px solid rgb(173, 84, 84);
+}
+
+.d3 {
+  margin-top: 30px;
+  /*background-color: rgb(236, 134, 168);*/
+
+  padding: 1px 30px;
+  border-radius: 10px;
+  border: 5px solid rgb(173, 84, 84);
+}
+
+.quote {
+  font-size: 35px;
+  color: rgb(173, 84, 84);
+  text-align: center;
+}
+
+.ttext {
+  background-color: rgba(255, 255, 255, 0.589);
+  padding: 20px;
+  color: rgb(173, 84, 84);
+  margin: 0 auto;
+  width: 90%;
+  z-index: 1;
+  border-right: 5px solid rgb(173, 84, 84);
+  border-left: 5px solid rgb(173, 84, 84);
+
+}
+
+.s2 {
+  background-color: rgba(255, 255, 255, 0.589);
+  /*background-image: url(photo/bg7.jpg);*/
+  padding: 20px;
+  color: rgb(173, 84, 84);
+  margin: 0 auto;
+  width: 90%;
+  height: 510PX;
+  position: relative;
+  border-right: 5px solid rgb(173, 84, 84);
+  border-left: 5px solid rgb(173, 84, 84);
+}
+
+.dp1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50ch;
+  transition: all .5s ease-out;
+  opacity: 0.9;
+
+}
+
+.dp1:hover {
+  width: 320px;
+  height: 320px;
+  opacity: 1;
+}
+
+
+
+
+.d1 {
+  position: absolute;
+}
+
+#hd1 {
+  top: 6%;
+  left: 15%;
+  text-align: center;
+}
+
+#hd2 {
+  top: 8%;
+  right: 25%;
+  text-align: left;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+}
+
+.dicon {
+  margin-top: 80px;
+}
+
+.instagram,
+.facebook {
+  margin-top: 5px;
+  position: relative;
+  width: 160px;
+  height: 45px;
+  background-color: rgba(173, 84, 84, 0.39);
+  border-radius: 50px;
+}
+
+.ig-link,
+.fb-link {
+  position: absolute;
+  top: 1px;
+  left: 3px;
+}
+
+.ig-text {
+  position: absolute;
+  top: -13px;
+  right: 18px;
+  font-size: 22px;
+}
+
+.fb-text {
+  position: absolute;
+  top: -7px;
+  right: 12px;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(209, 77, 121);
+}
+
+.education a:hover {
+  color: brown;
+}
+
+/*header*/
+.text {
+  margin-top: 10%;
+  text-align: center;
+  width: 300px;
+  /*background-color: rgb(236, 134, 168);*/
+  background-image: url(photo/bg1.jpg);
+  font-size: 15px;
+}
+
+.text h1 {
+  border: 3px solid rgb(173, 84, 84);
+}
+
+.s2text {
+  text-align: center;
+  width: 300px;
+  background-color: rgb(236, 134, 168);
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.s1con {
+  position: relative;
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: rgb(218, 124, 155);
+  background-image: url();
+  border: 6px solid rgb(173, 84, 84);
+  /*專業技能欄*/
+}
+
+.s1con .card {
+  position: relative;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.cir {
+  position: relative;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background: rgb(236, 134, 168);
+  background-image: url();
+}
+
+.cir .word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.cir .word h2 {
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(173, 84, 84);
+  transition: 0.5s;
+}
+
+.card:hover .cir .word h2 {
+  color: #777;
+  font-size: 40px;
+}
+
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 999;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgb(226, 114, 114);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 380;
+  transition: 0.5s;
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(380 - (380 * 78) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 78) / 100);
+  stroke: brown;
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+  stroke-dasharray: 380;
+  stroke-dashoffset: calc(380 - (380 * 83) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 83) / 100);
+  stroke: brown;
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(380 - (380 * 90) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 90) / 100);
+  stroke: brown;
+}
+
+.card:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(380 - (380 * 85) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 85) / 100);
+  stroke: brown;
+}
+
+.card:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(380 - (380 * 60) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(5) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 60) / 100);
+  stroke: brown;
+}
+
+.card:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(380 - (380 * 75) / 100);
+  stroke: brown;
+}
+
+.card:hover:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(-380 + (380 * 75) / 100);
+  stroke: brown;
+}
+
+.tags {
+  position: relative;
+  font-size: 20px;
+}
+
+.tags:hover:after {
+  background: rgb(173, 84, 84);
+  border-radius: 10px;
+  color: #fff;
+  content: attr(ishow);
+  left: 30%;
+  bottom: 80%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.s2left {
+  position: absolute;
+  width: 30%;
+}
+
+.s2center {
+  position: absolute;
+  width: 30%;
+  left: 33%;
+}
+
+.s2right {
+  position: absolute;
+  width: 30%;
+  left: 70%;
+}
+
+.bar {
+  margin-top: -10px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 50px;
+}
+
+.r,
+.c,
+.j,
+.p,
+.h {
+  background-color: rgba(165, 42, 42, 0.788);
+  position: relative;
+  animation-timing-function: ease-in-out;
+}
+
+.r {
+  animation: move1 5s 3;
+  width: 90%
+}
+
+.c {
+  animation: move2 5s 3;
+  width: 70%
+}
+
+.j {
+  animation: move3 5s 3;
+  width: 80%
+}
+
+.p {
+  animation: move4 5s 3;
+  width: 70%
+}
+
+.h {
+  animation: move5 5s 3;
+  width: 60%
+}
+
+@keyframes move1 {
+  from {
+    width: 0%;
+    ;
+  }
+
+  to {
+    width: 90%;
+    ;
+  }
+}
+
+@keyframes move2 {
+  from {
+    width: 0%;
+    ;
+  }
+
+  to {
+    width: 70%;
+    ;
+  }
+}
+
+@keyframes move3 {
+  from {
+    width: 0%;
+    ;
+  }
+
+  to {
+    width: 80%;
+    ;
+  }
+}
+
+@keyframes move4 {
+  from {
+    width: 0%;
+    ;
+  }
+
+  to {
+    width: 70%;
+    ;
+  }
+}
+
+@keyframes move5 {
+  from {
+    width: 0%;
+    ;
+  }
+
+  to {
+    width: 60%;
+    ;
+  }
+}
+
+.bar P {
+  font-size: 20PX;
+  margin-bottom: auto;
+}
+
+.s3 {
+  background-color: rgba(255, 255, 255, 0.589);
+  /*background-image: url(photo/bg7.jpg);*/
+  padding: 20px;
+  color: rgb(173, 84, 84);
+  margin: 0 auto;
+  width: 90%;
+  height: 1500px;
+  position: relative;
+  border: 6px solid rgb(173, 84, 84);
+}
+
+.s3left {
+  width: 40%;
+}
+
+.s3right {
+  position: absolute;
+  top: -10px;
+  left: 49%;
+  width: 60%;
+}
+
+/*section3 right timeline*/
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: rgb(173, 84, 84);
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(173, 84, 84);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.tlcon {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 70%;
+}
+
+.tlcon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  background-image: url(photo/bg4.jpg);
+  border: 4px solid rgb(173, 84, 84);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: -20%;
+}
+
+.right {
+  left: 50%;
+}
+
+.r1 {
+  margin-top: -80%;
+}
+
+.l2 {
+  margin-top: -20%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(173, 84, 84);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(173, 84, 84);
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(173, 84, 84);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(173, 84, 84) transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: brown;
+  background-image: url(photo/bg6.jpg);
+  position: relative;
+  border-radius: 6px;
+  border: 3px solid rgb(173, 84, 84);
+}
+
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width tlcons */
+  .tlcon {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .tlcon::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right tlcons behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.g11 {
+  width: 95%;
+}
+
+.g1 {
+  width: 79.2px;
+  height: 110.88px;
+}
+
+.education {
+  margin-left: 10px;
+  margin-top: 65px;
+}
+
+.education h3 {
+  padding: 10px;
+  background-color: rgba(173, 84, 84, 0.5);
+  width: 300px;
+  border-radius: 10px;
+}
+
+.bt {
+  width: 70%;
+  margin-top: 50px;
+}
+
+.accordion {
+  background-color: rgba(173, 84, 84, 0.5);
+  color: white;
+  cursor: pointer;
+  width: 90%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgba(173, 84, 84, 0.808);
+}
+
+.panel {
+  padding: 0 5px;
+  width: 90%;
+  display: none;
+  background-color: rgba(173, 84, 84, 0.5);
+  background-image: url(photo/bg6.jpg);
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgba(173, 84, 84, 0.808);
+}
+
+.ct {
+  margin-top: 10%;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row>.column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.s3c {
+  background-color: white;
+  background-image: url(photo/bg4.jpg);
+  padding: 10px;
+  position: relative;
+}
+
+.s3c:hover .record-text {
+  opacity: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.pj {
+  position: relative;
+}
+
+.pj img {
+  text-align: center;
+  border: 8px solid rgba(173, 84, 84, 0.5);
+  border-radius: 2px;
+  position: relative;
+}
+
+.pjt {
+  width: 600px;
+}
+
+.project-text {
+  opacity: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.65);
+  top: 6px;
+  left: 6px;
+  width: 72%;
+  height: 95%;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(173, 84, 84);
+  padding-top: 80px;
+}
+
+.pj:hover .project-text {
+  opacity: 1;
+}
+
+.record-text {
+  opacity: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.445);
+  top: 10px;
+  width: 90%;
+  height: 85%;
+  text-align: center;
+  color: rgb(85, 39, 39);
+  padding-top: 30px;
+  border: 3px solid rgba(173, 84, 84, 0.7);
+}
+
+.footer {
+  width: 90%;
+  background-color: ;
+  margin: 0 auto;
+  height: 70px;
+  overflow: hidden;
+  color: navy;
+  text-align: center;
+
+}
+
+.ft {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.ftx {
+  margin: 0px auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/*頁尾*/
